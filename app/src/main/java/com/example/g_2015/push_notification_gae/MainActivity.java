@@ -102,7 +102,7 @@ public class MainActivity extends ActionBarActivity {
     private String getRegistrationId(Context context) {
         final SharedPreferences prefs = getGCMPreferences(context);
         String registrationId = prefs.getString(PROPERTY_REG_ID, "");
-        if (regid.equals("")) {
+        if (registrationId.equals("")) {
             return "";
         }
         // アプリケーションがバージョンアップされていた場合、レジストレーションIDをクリア
