@@ -60,6 +60,11 @@ public class GcmIntentService extends IntentService {
     }
 
     private void sendNotification(String title, String msg) {
+
+        if( title == null) {
+            title = "GCM Notification";
+        }
+
         mNotificationManager = (NotificationManager)
                 this.getSystemService(Context.NOTIFICATION_SERVICE);
 
